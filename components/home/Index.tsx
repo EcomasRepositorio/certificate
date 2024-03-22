@@ -22,13 +22,10 @@ const Home = () => {
 
 return (
 <div className='p-10'>
-<form>
+<form className='mb-20'>
   <div className="grid gap-6 mb-6 md:grid-cols-2">
     <div>
-      <Label
-        htmlFor='first_name'>
-          Nombres y Apellidos:
-      </Label>
+      <Label htmlFor='first_name'>Nombres y Apellidos:</Label>
       <Input
         id='name'
         type='text'
@@ -38,14 +35,14 @@ return (
         onChange={(e) => handleChange('name', e.target.value)}/>
     </div>
     <div>
-    <label htmlFor='code'>Código:</label>
-      <input
+    <Label htmlFor='code'>Código:</Label>
+      <Input
         id='code'
         type='text'
         name='code'
+        required
         value={code}
-        onChange={(e) => handleChange('code', e.target.value)}
-        required/>
+        onChange={(e) => handleChange('code', e.target.value)}/>
     </div>
   </div>
 
